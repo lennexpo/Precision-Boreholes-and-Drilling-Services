@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precision Boreholes and Drilling Services | Harare, Zimbabwe</title>
+  <meta name="description" content="Professional borehole drilling, solar pump installation, and irrigation systems in Harare, Zimbabwe. Best quality service at affordable prices." />
+  <meta property="og:title" content="Precision Boreholes and Drilling Services" />
+  <meta property="og:description" content="Borehole drilling, solar pump installation, and irrigation systems in Zimbabwe." />
+  <meta property="og:url" content="https://lennexpo.github.io/precision-boreholes" />
+  <link rel="canonical" href="https://lennexpo.github.io/precision-boreholes" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,900;1,6..12,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --navy:   #0C1E3E;
+      --navy2:  #071530;
+      --blue:   #1666C1;
+      --sky:    #3EA8F5;
+      --amber:  #F5A623;
+      --white:  #FFFFFF;
+      --light:  #F2F6FC;
+      --mid:    #D0DFF0;
+      --muted:  #5A6E8A;
+      --radius: 3px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Nunito Sans', sans-serif; color: var(--navy); background: var(--white); overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+    section { padding: clamp(4rem, 8vw, 7rem) 0; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    p { line-height: 1.72; color: var(--muted); }
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.03em; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(12, 30, 62, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.45rem; letter-spacing: 0.1em;
+      color: var(--white);
+    }
+    .nav-logo .dot { color: var(--amber); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--amber); }
+    .nav-cta {
+      background: var(--amber); color: var(--navy);
+      font-weight: 900; font-size: 0.78rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.62rem 1.4rem; border-radius: var(--radius);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: #e09810; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 23px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    @media (max-width: 780px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+    /* Mobile menu */
+    .mobile-nav {
+      display: none; position: fixed;
+      top: 68px; left: 0; right: 0; z-index: 99;
+      background: rgba(12,30,62,0.98);
+      padding: 1.5rem clamp(1.25rem, 5vw, 3rem);
+      flex-direction: column; gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: rgba(255,255,255,0.75);
+      font-weight: 700; font-size: 0.95rem;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex; align-items: flex-end;
+      padding-top: 68px;
+      padding-bottom: clamp(3rem, 7vw, 5.5rem);
+      overflow: hidden;
+      background: var(--navy2);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('assets/img/hero.webp');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.32;
+      transform: scale(1.06);
+      animation: kenburns 18s ease-out forwards;
+    }
+    @keyframes kenburns { to { transform: scale(1); } }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(7, 21, 48, 0.98) 0%,
+        rgba(7, 21, 48, 0.65) 45%,
+        rgba(7, 21, 48, 0.15) 100%
+      );
+    }
+    /* Engineering grid texture */
+    .hero-blueprint {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(62,168,245,0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62,168,245,0.055) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    /* Vertical accent line */
+    .hero-line {
+      position: absolute; left: clamp(1.25rem, 5vw, 3rem); top: 68px; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent 0%, var(--sky) 30%, rgba(62,168,245,0.15) 100%);
+      opacity: 0.4;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 1.1rem;
+    }
+    .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--amber); display: block; }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4.5rem, 13.5vw, 10.5rem);
+      line-height: 0.88; letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .hero-title .hl { color: var(--sky); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      font-weight: 300; color: rgba(255,255,255,0.65);
+      max-width: 500px; margin-bottom: 2.75rem; line-height: 1.55;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-amber {
+      background: var(--amber); color: var(--navy);
+      font-weight: 900; font-size: 0.85rem;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 1rem 2.2rem; border-radius: var(--radius);
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn-amber:hover { background: #e09810; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(245,166,35,0.38); }
+    .btn-ghost {
+      background: transparent; color: var(--white);
+      font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 1rem 2.2rem; border-radius: var(--radius);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.07); }
+
+    /* Hero right stats */
+    .hero-stats {
+      position: absolute; right: clamp(1.25rem, 5vw, 3rem);
+      bottom: clamp(3rem, 7vw, 5.5rem);
+      z-index: 2; display: flex; flex-direction: column; gap: 1.75rem; text-align: right;
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      color: var(--sky); line-height: 1;
+    }
+    .hero-stat-lbl {
+      font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
+    @media (max-width: 640px) { .hero-stats { display: none; } }
+
+    /* ============================================================
+       TICKER
+    ============================================================ */
+    .ticker { background: var(--amber); padding: 0.7rem 0; overflow: hidden; }
+    .ticker-track {
+      display: flex; gap: 0; white-space: nowrap;
+      animation: ticker 28s linear infinite;
+    }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-item {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem; letter-spacing: 0.1em;
+      color: var(--navy); padding: 0 2rem;
+      flex-shrink: 0;
+    }
+    .ticker-item::after { content: ' ◆'; font-size: 0.65em; }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services { background: var(--light); }
+    .section-eyebrow {
+      font-size: 0.72rem; font-weight: 900; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--blue);
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+    .section-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--blue); flex-shrink: 0; }
+    .section-title { font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.0; color: var(--navy); margin-bottom: 0.9rem; }
+    .section-lead { font-size: 1.05rem; max-width: 520px; }
+    .section-header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 2px solid var(--mid);
+      gap: 0;
+    }
+    @media (max-width: 860px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .services-grid { grid-template-columns: 1fr; } }
+
+    .svc-card {
+      background: var(--white);
+      padding: 2.25rem 1.75rem;
+      border: 1px solid var(--mid);
+      position: relative; overflow: hidden;
+      transition: background 0.25s;
+    }
+    .svc-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--blue);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .svc-card:hover { background: #EAF2FC; }
+    .svc-card:hover::after { transform: scaleX(1); }
+    .svc-icon {
+      width: 48px; height: 48px;
+      background: var(--light); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.2rem;
+      transition: background 0.25s;
+    }
+    .svc-card:hover .svc-icon { background: rgba(62,168,245,0.18); }
+    .svc-num {
+      position: absolute; top: 1.25rem; right: 1.5rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem; color: var(--mid); line-height: 1;
+      transition: color 0.25s;
+    }
+    .svc-card:hover .svc-num { color: rgba(62,168,245,0.25); }
+    .svc-card h3 {
+      font-size: 0.92rem; font-weight: 900;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 0.6rem;
+    }
+    .svc-card p { font-size: 0.88rem; line-height: 1.68; }
+
+    /* ============================================================
+       ABOUT (dark)
+    ============================================================ */
+    #about {
+      background: var(--navy2);
+      position: relative; overflow: hidden;
+    }
+    #about::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(62,168,245,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62,168,245,0.035) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .about-grid {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1.1fr;
+      gap: clamp(2.5rem, 6vw, 5rem); align-items: center;
+    }
+    @media (max-width: 780px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-img-wrap { position: relative; }
+    .about-img-main {
+      width: 100%; aspect-ratio: 4/5;
+      object-fit: cover; object-position: center top;
+      border: 3px solid rgba(62,168,245,0.25);
+    }
+    .about-badge {
+      position: absolute; bottom: -1.25rem; right: -1.25rem;
+      background: var(--amber); padding: 1.1rem 1.35rem; text-align: center;
+    }
+    .about-badge-num {
+      display: block; font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem; color: var(--navy); line-height: 1;
+    }
+    .about-badge-lbl {
+      font-size: 0.68rem; font-weight: 900; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .about-text .section-eyebrow { color: var(--sky); }
+    .about-text .section-eyebrow::before { background: var(--sky); }
+    .about-title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.0; color: var(--white); margin-bottom: 1.2rem; }
+    .about-body { color: rgba(255,255,255,0.6); font-size: 0.98rem; margin-bottom: 1.75rem; }
+    .checks { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2.25rem; }
+    .checks li {
+      display: flex; align-items: center; gap: 0.75rem;
+      color: rgba(255,255,255,0.78); font-size: 0.93rem; font-weight: 600;
+    }
+    .checks li::before {
+      content: '✓'; flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--blue); color: white;
+      font-size: 0.75rem; font-weight: 900;
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    #gallery { background: var(--white); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 260px);
+      gap: 8px;
+    }
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .g-span2 { grid-column: span 1; grid-row: span 1; }
+      .gallery-grid .g-item { height: 180px; }
+    }
+    .g-item {
+      overflow: hidden; position: relative; cursor: zoom-in;
+      background: var(--light);
+    }
+    .g-span2 { grid-column: span 2; }
+    .g-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.55s ease, filter 0.3s;
+      filter: saturate(0.8) brightness(0.95);
+    }
+    .g-item:hover img { transform: scale(1.07); filter: saturate(1.05) brightness(1); }
+    .g-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(12,30,62,0.55) 0%, transparent 55%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .g-item:hover::after { opacity: 1; }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact { background: var(--light); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.45fr;
+      gap: clamp(2.5rem, 6vw, 5rem); align-items: start;
+    }
+    @media (max-width: 780px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info .section-eyebrow { color: var(--blue); }
+    .contact-info .section-eyebrow::before { background: var(--blue); }
+    .contact-info h2 { color: var(--navy); margin-bottom: 0.9rem; }
+    .contact-info > p { margin-bottom: 2rem; font-size: 1rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 1.2rem; }
+    .c-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .c-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--navy); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.05rem; color: var(--amber);
+    }
+    .c-label {
+      font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 0.2rem;
+    }
+    .c-val { font-size: 0.92rem; color: var(--muted); }
+    .c-val a { color: var(--blue); font-weight: 700; }
+
+    /* Form */
+    .contact-form {
+      background: var(--white);
+      padding: clamp(1.75rem, 4vw, 2.75rem);
+      border: 2px solid var(--mid);
+      border-top: 3px solid var(--blue);
+    }
+    .form-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem; letter-spacing: 0.05em;
+      color: var(--navy); margin-bottom: 1.5rem;
+    }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 500px) { .f-row { grid-template-columns: 1fr; } }
+    .f-group { display: flex; flex-direction: column; gap: 0.38rem; margin-bottom: 1rem; }
+    .f-group label {
+      font-size: 0.7rem; font-weight: 900; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .f-group input,
+    .f-group select,
+    .f-group textarea {
+      padding: 0.78rem 1rem;
+      border: 1.5px solid var(--mid);
+      border-radius: var(--radius);
+      font-family: inherit; font-size: 0.9rem;
+      color: var(--navy); background: var(--white);
+      outline: none; transition: border-color 0.2s;
+    }
+    .f-group input:focus,
+    .f-group select:focus,
+    .f-group textarea:focus { border-color: var(--blue); }
+    .f-group textarea { resize: vertical; min-height: 108px; }
+    .f-group select { appearance: none; cursor: pointer; }
+    .f-submit {
+      width: 100%; padding: 1rem;
+      background: var(--navy); color: white;
+      font-family: inherit; font-weight: 900;
+      font-size: 0.85rem; letter-spacing: 0.12em;
+      text-transform: uppercase; border-radius: var(--radius);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .f-submit:hover { background: var(--blue); transform: translateY(-1px); }
+    #form-ok {
+      display: none; text-align: center;
+      padding: 1.25rem; color: var(--blue);
+      font-weight: 700; font-size: 0.95rem;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #060F20;
+      padding: 2.25rem 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem; letter-spacing: 0.1em; color: white;
+    }
+    .footer-logo .dot { color: var(--amber); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .footer-credit { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .footer-credit a { color: #C8F53E; font-weight: 800; }
+    .footer-credit a:hover { color: #d4ff50; }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal        { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left   { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right  { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in, .reveal-left.in, .reveal-right.in { opacity: 1; transform: none; }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="nav-logo">Precision<span class="dot">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+      <div class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services" onclick="closeNav()">Services</a>
+    <a href="#about"    onclick="closeNav()">About</a>
+    <a href="#gallery"  onclick="closeNav()">Projects</a>
+    <a href="#contact"  onclick="closeNav()">Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-blueprint"></div>
+    <div class="hero-line"></div>
+
+    <div class="container hero-content">
+      <div class="hero-eyebrow">Harare, Zimbabwe &nbsp;·&nbsp; Open 24 Hours</div>
+      <h1 class="hero-title display">
+        Precision<br>
+        <span class="hl">Boreholes</span><br>
+        &amp; Drilling
+      </h1>
+      <p class="hero-sub">Best quality borehole drilling, solar pump installation, and irrigation systems — delivered at prices that make sense for Zimbabwe.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-amber">Get a Free Quote</a>
+        <a href="tel:0775129257" class="btn-ghost">📞&nbsp; 077 512 9257</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">24/7</div>
+        <div class="hero-stat-lbl">Always Available</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-lbl">Quality Guaranteed</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">ZWE</div>
+        <div class="hero-stat-lbl">Nationwide Service</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">Borehole Drilling</span>
+      <span class="ticker-item">Solar Pump Installation</span>
+      <span class="ticker-item">Water Survey</span>
+      <span class="ticker-item">Irrigation Systems</span>
+      <span class="ticker-item">Home Solar Systems</span>
+      <span class="ticker-item">Shallow Well Pumps</span>
+      <span class="ticker-item">Open 24 Hours</span>
+      <span class="ticker-item">Harare &amp; Beyond</span>
+      <span class="ticker-item">Borehole Drilling</span>
+      <span class="ticker-item">Solar Pump Installation</span>
+      <span class="ticker-item">Water Survey</span>
+      <span class="ticker-item">Irrigation Systems</span>
+      <span class="ticker-item">Home Solar Systems</span>
+      <span class="ticker-item">Shallow Well Pumps</span>
+      <span class="ticker-item">Open 24 Hours</span>
+      <span class="ticker-item">Harare &amp; Beyond</span>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">What We Do</div>
+        <h2 class="section-title display">Our Services</h2>
+        <p class="section-lead">From site survey to full installation — every step handled with precision and professionalism.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="svc-card reveal delay-1">
+          <div class="svc-icon">🔍</div>
+          <div class="svc-num">01</div>
+          <h3>Underground Water Survey</h3>
+          <p>Hydro-geological surveys using advanced detection equipment to identify the best drilling sites before a single metre is drilled.</p>
+        </div>
+
+        <div class="svc-card reveal delay-2">
+          <div class="svc-icon">⚙️</div>
+          <div class="svc-num">02</div>
+          <h3>Borehole Drilling</h3>
+          <p>High-capacity rigs for any depth. Clean, precise boreholes drilled to spec for residential, commercial, and agricultural use.</p>
+        </div>
+
+        <div class="svc-card reveal delay-3">
+          <div class="svc-icon">☀️</div>
+          <div class="svc-num">03</div>
+          <h3>Solar Pump Installation</h3>
+          <p>ZESA-independent solar pump systems — submersible pumps paired with solar panels and controllers for reliable, low-cost water year-round.</p>
+        </div>
+
+        <div class="svc-card reveal delay-1">
+          <div class="svc-icon">💧</div>
+          <div class="svc-num">04</div>
+          <h3>Irrigation Systems</h3>
+          <p>Custom drip and sprinkler irrigation designed for your plot size and crop type. Maximise yield while minimising water waste.</p>
+        </div>
+
+        <div class="svc-card reveal delay-2">
+          <div class="svc-icon">🏠</div>
+          <div class="svc-num">05</div>
+          <h3>Home Solar Systems</h3>
+          <p>Complete residential solar solutions — panels, inverters, and battery backup — so you can power your home off the grid.</p>
+        </div>
+
+        <div class="svc-card reveal delay-3">
+          <div class="svc-icon">🔧</div>
+          <div class="svc-num">06</div>
+          <h3>Shallow Well Pumps</h3>
+          <p>Installation and servicing of shallow well and surface pump systems — ideal for supplementary supply and garden irrigation.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-img-wrap reveal-left">
+          <img src="assets/img/project.webp" alt="Completed borehole and water tower project" class="about-img-main" />
+          <div class="about-badge">
+            <strong class="about-badge-num">24/7</strong>
+            <span class="about-badge-lbl">Always on call</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <div class="section-eyebrow">Who We Are</div>
+          <h2 class="about-title display">Built on Precision.<br>Driven by Results.</h2>
+          <p class="about-body">Precision Boreholes and Drilling Services is a Harare-based company delivering complete water and solar solutions across Zimbabwe. From household boreholes to large-scale commercial installations, we bring the same standard of precision to every single project.</p>
+          <ul class="checks">
+            <li>Fully equipped drilling rigs for any depth</li>
+            <li>Solar-powered systems for ZESA independence</li>
+            <li>Trusted by residential &amp; commercial clients</li>
+            <li>Based in Harare, serving the whole country</li>
+            <li>Affordable pricing, never at the cost of quality</li>
+          </ul>
+          <a href="#contact" class="btn-amber">Request a Quote →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Our Work</div>
+        <h2 class="section-title display">Projects on the Ground</h2>
+        <p class="section-lead">Residential, commercial, and community installations across Zimbabwe.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="g-item g-span2">
+          <img src="assets/img/hero.webp" alt="Completed water tower installation" loading="lazy" />
+        </div>
+        <div class="g-item">
+          <img src="assets/img/rig.webp" alt="Drilling rig truck on site" loading="lazy" />
+        </div>
+        <div class="g-item">
+          <img src="assets/img/installation.webp" alt="Team completing borehole installation" loading="lazy" />
+        </div>
+        <div class="g-item g-span2">
+          <img src="assets/img/project.webp" alt="Completed borehole project handover" loading="lazy" />
+        </div>
+        <div class="g-item">
+          <img src="assets/img/equipment.webp" alt="Solar panels and submersible pump equipment" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="reveal-left">
+          <div class="section-eyebrow">Get in Touch</div>
+          <h2 class="section-title display" style="color: var(--navy)">Let's Get Water<br>Flowing.</h2>
+          <p style="margin-bottom: 2rem; font-size: 1rem;">Tell us about your project and we'll come back with a free consultation. We're available 24 hours — reach us any time.</p>
+          <div class="contact-items">
+            <div class="c-item">
+              <div class="c-icon">📍</div>
+              <div>
+                <div class="c-label">Address</div>
+                <div class="c-val">Weydon Centre, 12 Union Ave, Harare</div>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">📞</div>
+              <div>
+                <div class="c-label">Phone / WhatsApp</div>
+                <div class="c-val"><a href="tel:0775129257">077 512 9257</a></div>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">🕐</div>
+              <div>
+                <div class="c-label">Hours</div>
+                <div class="c-val">Open 24 Hours, 7 Days a Week</div>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">🗺️</div>
+              <div>
+                <div class="c-label">Service Area</div>
+                <div class="c-val">Harare &amp; Nationwide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <div class="form-title display">Send an Enquiry</div>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Enquiry — Precision Boreholes Website" />
+            <input type="hidden" name="redirect" value="false" />
+            <div class="f-row">
+              <div class="f-group">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" required />
+              </div>
+              <div class="f-group">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" name="phone" placeholder="07X XXX XXXX" required />
+              </div>
+            </div>
+            <div class="f-group">
+              <label for="service">Service Required</label>
+              <select id="service" name="service" required>
+                <option value="">— Select a service —</option>
+                <option>Underground Water Survey</option>
+                <option>Borehole Drilling</option>
+                <option>Solar Pump Installation</option>
+                <option>Irrigation System (Drip or Sprinkler)</option>
+                <option>Home Solar System</option>
+                <option>Shallow Well Pump Installation</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="f-group">
+              <label for="location">Project Location</label>
+              <input id="location" type="text" name="location" placeholder="Suburb or town" />
+            </div>
+            <div class="f-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us a bit more about your project..."></textarea>
+            </div>
+            <button type="submit" class="f-submit" id="submitBtn">Send Enquiry →</button>
+            <div id="form-ok">✅ Message sent! We'll be in touch shortly.</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">Precision<span class="dot">.</span> Boreholes</div>
+      <div class="footer-copy">© 2026 Precision Boreholes and Drilling Services · Harare, Zimbabwe</div>
+      <div class="footer-credit">Designed by <a href="https://invitt.co.zw" target="_blank" rel="noopener">Invitt Co</a></div>
+    </div>
+  </footer>
+
+  <!-- ===================== JS ===================== -->
+  <script>
+    // — Hamburger —
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileNav');
+    ham.addEventListener('click', () => mob.classList.toggle('open'));
+    function closeNav() { mob.classList.remove('open'); }
+
+    // — Scroll reveal —
+    const revEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    revEls.forEach(el => ro.observe(el));
+
+    // — Form —
+    const form = document.getElementById('contactForm');
+    const btn  = document.getElementById('submitBtn');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      try {
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const json = await res.json();
+        if (json.success) {
+          form.reset();
+          document.getElementById('form-ok').style.display = 'block';
+          btn.textContent = '✓ Sent!';
+        } else { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+      } catch { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+    });
+  </script>
+</body>
+</html>
